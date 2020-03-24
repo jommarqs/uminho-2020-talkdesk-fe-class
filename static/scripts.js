@@ -5,10 +5,14 @@ const rootElement = document.getElementById('root');
 const list = rootElement.querySelector('.todo-list');
 
 // Add Todo Function
-function addTodo(description) {
+function addTodo(description, completed) {
   // create todo `li` with `todo-item` class
   const todoElem = document.createElement('li');
   todoElem.setAttribute('class', 'todo-item');
+
+  if (completed) {
+    todoElem.classList.add("done")
+  }
 
   // create description `span` with description text
   const descriptionElem = document.createElement('span');
@@ -32,9 +36,9 @@ function addTodo(description) {
   list.appendChild(todoElem);
 }
 
-addTodo('Learn CSS');
-addTodo('Learn HTML');
-addTodo('Learn JavaScript');
+addTodo('Learn CSS', true);
+addTodo('Learn HTML', true);
+addTodo('Learn JavaScript', false);
 
 function handleKeyPress(event) {
   const value = event.target.value;
@@ -71,7 +75,7 @@ function resetTodosList() {
     .then(todosList => {
       list.innerHTML = "";
       todosList.forEach(todo => {
-        addTodo(todo.title);
+        addTodo(todo.title, todo.completed);
       })
     })
 }
