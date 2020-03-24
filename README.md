@@ -35,12 +35,12 @@ Disadvantages of this solution:
 
 # Homework Challenges
 
-1. ~~API returns some todos with `{ completed: true }`~~
+1. ~~API returns some todos with `{ completed: true }`:~~
   - ~~All todos with `completed=true` must have the class "done"~~
 
-2. Todos counter - 3/5
-  - 3 is the number of uncompleted todos
-  - 5 is the number of total todos
+2. ~~Todos counter - 3/5:~~
+  - ~~3 is the number of uncompleted todos~~
+  - ~~5 is the number of total todos~~
 
 3. Support multiple instances of todos on the same page:
   - Create a more modularized application;

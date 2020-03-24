@@ -3,6 +3,7 @@ console.log('Welcome to UMinho 2020 FE class')
 // find the elements
 const rootElement = document.getElementById('root');
 const list = rootElement.querySelector('.todo-list');
+const todosCompleted = rootElement.querySelector('.todos-completed');
 
 // Add Todo Function
 function addTodo(description, completed) {
@@ -34,6 +35,8 @@ function addTodo(description, completed) {
   todoElem.appendChild(descriptionElem);
   todoElem.appendChild(removeElem);
   list.appendChild(todoElem);
+
+  updateCounter();
 }
 
 addTodo('Learn CSS', true);
@@ -57,10 +60,14 @@ input.addEventListener('keypress', handleKeyPress);
 
 function toggleTodo(todoElem) {
   todoElem.classList.toggle('done');
+
+  updateCounter();
 }
 
 function removeTodo(todoElem) {
   list.removeChild(todoElem);
+
+  updateCounter();
 }
 
 function resetTodosList() {
@@ -80,6 +87,17 @@ function resetTodosList() {
     })
 }
 
-// register todos click handler
+// register reset todos click handler
 const resetTodo = rootElement.querySelector('.reset-todos');
 resetTodo.addEventListener('click', resetTodosList);
+
+function updateCounter() {
+  const totalTodos = document.querySelectorAll(".todo-item").length;
+  const totalCompletedTodos = document.querySelectorAll(".done").length;
+
+  if (totalTodos === totalCompletedTodos) {
+    todosCompleted.innerHTML = "All todos completed"
+  } else {
+    todosCompleted.innerHTML = `${totalCompletedTodos} of ${totalTodos} todos completed`
+  }
+}
