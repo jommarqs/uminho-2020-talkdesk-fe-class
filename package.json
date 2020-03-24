@@ -1,0 +1,25 @@
+{
+  "name": "uminho-2020-talkdesk-fe-class",
+  "version": "1.0.0",
+  "description": "A very basic skeleton for the UMinho 2020 FE class.",
+  "scripts": {
+    "start": "http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jommarqs/uminho-2020-talkdesk-fe-class.git"
+  },
+  "keywords": [
+    "uminho-2020"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jommarqs/uminho-2020-talkdesk-fe-class/issues"
+  },
+  "homepage": "https://github.com/jommarqs/uminho-2020-talkdesk-fe-class#readme",
+  "devDependencies": {
+    "http-server": "^0.12.1"
+  }
+}
