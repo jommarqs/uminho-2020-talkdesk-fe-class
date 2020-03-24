@@ -1,14 +1,36 @@
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
-  </head>
-  <body>
-    <header>
-      <h1 class="title">todos</h1>
-    </header>
-    <main>
-      <!-- HTML goes here-->
-    </main>
-    <script src="static/scripts.js"></script>
-  </body>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="title">todos</h1>
+  </header>
+  <main id="root">
+    <div class="todo-app">
+      <div class="todos">
+        <input class="add-todo" type="text" placeholder="Add new todo" />
+        <input class="reset-todos" type="button" value="Reset Todos" />
+        <ul class="todo-list">
+          <li class="todo-item">
+            <span class="description">Learn JS</span>
+            <span class="remove">&#x2716;</span>
+          </li>
+          <li class="todo-item done">
+            <span class="description">Learn HTML</span>
+            <span class="remove">&#x2716;</span>
+          </li>
+          <li class="todo-item done">
+            <span class="description">Learn CSS</span>
+            <span class="remove">&#x2716;</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="static/scripts.js"></script>
+</body>
+
 </html>
