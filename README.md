@@ -42,6 +42,6 @@ Disadvantages of this solution:
   - ~~3 is the number of uncompleted todos~~
   - ~~5 is the number of total todos~~
 
-3. Support multiple instances of todos on the same page:
-  - Create a more modularized application;
-  - Reduce the number of global symbols that we currently have;
+3. ~~Support multiple instances of todos on the same page:~~
+  - ~~Create a more modularized application;~~
+  - ~~Reduce the number of global symbols that we currently have;~~
